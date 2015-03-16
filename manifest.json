@@ -1,0 +1,22 @@
+﻿{
+    "manifest_version": 2,
+    "name":    "Test Extension",
+    "version": "0.0",
+    "offline_enabled": true,
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js":     ["fg/jquery-1.7.2.min.js","fg/content.js"],
+            "run_at": "document_end"
+        }
+    ],
+
+    "browser_action": {
+        "default_title": "Test Extension",
+        "default_popup": "popup/popup.html"
+    }
+}
